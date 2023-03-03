@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}VCU - Course Override{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1 style="color: gold;">VCU</h1>
+    <h2>Course Override Form</h2>
+    <p style="color: red;">* Indicates a required field</p>
+
+<style>
+    .required:before {
+    content:" * ";
+    color: red;
+  }
+</style>
+
+</div>
+    {{ wtf.quick_form(form) }}
+{% endblock %}

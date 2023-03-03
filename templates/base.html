@@ -1,0 +1,38 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}VCU{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="shortcut icon" href="{{ url_for('static', filename='vcu_logo.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='vcu.ico') }}" type="image/x-icon">
+{% endblock %}
+
+{% block navbar %}
+<link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-warning">
+        <div class="container-fluid">
+            <a class="navbar-collapse">
+            <h1>Virginia Commonwealth University</h1>
+      </a>
+    </div>
+    </nav>
+
+</body>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% block page_content %}{% endblock %}
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
+{% endblock %}
